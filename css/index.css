@@ -151,10 +151,15 @@ table {
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
+  max-width: 100%;
 }
 html,
 body {
   height: 100%;
+}
+.textContainer {
+  width: 50%;
+  border: 2px solid lightgrey;
 }
 header {
   margin-top: 2%;
@@ -185,6 +190,7 @@ header a:hover {
 }
 .heroSection .introWrapper {
   background-color: #DCDCDC;
+  width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -194,10 +200,51 @@ header a:hover {
   width: 20%;
 }
 .midSection {
-  border: 2px solid blue;
+  margin-top: 2%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.midSection .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  align-items: flex-start;
+}
+.midSection .wrapper .blurb p {
+  text-indent: 5rem;
+}
+.midSection .wrapper .innerContainer p {
+  padding: 1%;
+  border: 2px solid lightgrey;
+}
+@media (max-width: 800px) {
+  .midSection .wrapper {
+    flex-flow: column nowrap;
+  }
+  .midSection .wrapper .textContainer {
+    width: 100%;
+  }
+}
+.lowerSection {
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lowerSection .textContainer {
+  Width: 80%;
+}
+.contactSection {
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+}
+.contactSection .textContainer {
+  width: 80%;
 }
 footer {
   display: flex;

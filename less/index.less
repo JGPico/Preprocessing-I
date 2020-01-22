@@ -62,7 +62,8 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	max-width: 100%;
 }
 
 html, body {
@@ -98,6 +99,7 @@ html, body {
 
 .textContainer{
 	width: 50%;
+	border: 2px solid lightgrey;
 }
 
 header{
@@ -125,6 +127,7 @@ header{
 	.introWrapper{
 
 		background-color: @backgroundColor;
+		width: 80%;
 		.center();
 		flex-flow: column wrap;
 		.heroImage{
@@ -135,18 +138,54 @@ header{
 } // end heroSection
 
 .midSection{
-	border: 2px solid blue;
+	margin-top: 2%;
 	.center();
 
 	.wrapper{
-		center();
-		border: 2px solid black;
-	}
+		.center();
+		width: 80%;
+		align-items: flex-start;
+
+		.blurb p{
+			text-indent: 5rem;
+		}
+
+		.innerContainer p{
+			padding: 1%;
+			border: 2px solid lightgrey;
+		}
+
+		@media (max-width: 800px) {
+			flex-flow: column nowrap;
+			.textContainer{
+				width: 100%;
+			}
+		} // end media query 500px
+
+	} // end wrapper
+
 } // end midSection
 
 .lowerSection{
+	margin-top: 2%;
+	.center();
+	
+	.textContainer{
+		Width: 80%;
+	}
 
+	
 } // end lowerSection
+
+.contactSection{
+	margin-top: 2%;
+	.center();
+
+	.textContainer{
+		width: 80%;
+	}
+
+} // end contactSection
 
 footer{
 	.center();
