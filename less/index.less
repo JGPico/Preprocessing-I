@@ -20,7 +20,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 62.5%;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -30,7 +30,17 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	line-height: 1.4;
+}
+h1{
+	font-size: 2rem;
+}
+h2, h3, h4, h5, h6{
+	font-size: 1.6rem;
+}
+p, a{
+	font-size: 1.2rem;
+	margin: 1%;
 }
 ol, ul {
 	list-style: none;
@@ -48,12 +58,158 @@ table {
 	border-spacing: 0;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	max-width: 100%;
 }
 
 html, body {
     height: 100%;
 }
 
+// Styling css section
+
+// Variables
+
+@coolFont: 'Lato', sans-serif;
+@backgroundColor: #DCDCDC;
+
+// Mix-ins
+
+.center(){
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.normalizeFont(){
+	text-decoration: none;
+	font-size: 1.2rem;
+}
+
+.pad(){
+	margin: 0.5%;
+	padding: 1%;
+}
+
+// Primary
+
+.textContainer{
+	width: 50%;
+}
+
+header{
+	margin-top: 2%;
+	.center();
+	nav{
+		width: 50%;
+		.center();
+		justify-content: space-evenly
+	} // end nav
+	a{
+		.normalizeFont();
+		font-family: @coolFont;
+		padding: 2%;
+		&:hover{
+			color: green;
+		}
+	} // end a
+
+} // end header
+
+.heroSection{
+	.center(); 
+
+	.introWrapper{
+
+		background-color: @backgroundColor;
+		width: 80%;
+		.center();
+		flex-flow: column wrap;
+		.heroImage{
+			width: 20%;
+		} // end heroImage
+
+	} // end wrapper
+} // end heroSection
+
+.midSection{
+	margin-top: 2%;
+	.center();
+
+	.wrapper{
+		.center();
+		width: 80%;
+		align-items: flex-start;
+
+		.blurb p{
+			text-indent: 5rem;
+		}
+
+		.innerContainer p{
+			padding: 1%;
+			border: 2px solid lightgrey;
+		}
+
+		@media (max-width: 800px) {
+			flex-flow: column nowrap;
+			.textContainer{
+				width: 100%;
+			}
+		} // end media query 500px
+
+	} // end wrapper
+
+} // end midSection
+
+.lowerSection{
+	margin-top: 2%;
+	.center();
+	
+
+	.innerContainer{
+		width: 100%;
+		.center();
+		flex-direction: row;
+	}
+
+	.bar{
+		width:100%;
+		border-bottom: 2px solid lightgrey;
+		.pad();
+	}
+	
+	.textContainer{
+		Width: 80%;
+	}
+
+	
+} // end lowerSection
+
+.contactSection{
+	margin-top: 2%;
+	.center();
+
+	.textContainer{
+		width: 80%;
+	}
+
+} // end contactSection
+
+footer{
+	.center();
+
+	div{
+		.center();
+		width: 40%;
+		padding: 1%;
+		margin-top: 2%;
+		background-color: @backgroundColor;
+		border-radius: 2px;
+		
+	} // end div
+
+} // end footer
