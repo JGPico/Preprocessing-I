@@ -159,7 +159,6 @@ body {
 }
 .textContainer {
   width: 50%;
-  border: 2px solid lightgrey;
 }
 header {
   margin-top: 2%;
@@ -233,6 +232,19 @@ header a:hover {
   justify-content: center;
   align-items: center;
 }
+.lowerSection .innerContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.lowerSection .bar {
+  width: 100%;
+  border-bottom: 2px solid lightgrey;
+  margin: 0.5%;
+  padding: 1%;
+}
 .lowerSection .textContainer {
   Width: 80%;
 }
@@ -241,7 +253,6 @@ header a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid black;
 }
 .contactSection .textContainer {
   width: 80%;
